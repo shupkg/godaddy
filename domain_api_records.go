@@ -30,10 +30,10 @@ func (c *DomainClient) DeleteRecords(ctx context.Context, domain string, search 
 
 func Search(search ...string) (rs RecordSearch) {
     if len(search) > 0 {
-        rs.Type = search[1]
+        rs.Type = search[0]
     }
     if len(search) > 1 {
-        rs.Name = search[2]
+        rs.Name = search[1]
     }
     return
 }
